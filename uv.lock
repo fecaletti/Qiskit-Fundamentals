@@ -893,6 +893,19 @@ wheels = [
 ]
 
 [[package]]
+name = "imageio"
+version = "2.37.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pillow" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/84/93bcd1300216ea50811cee96873b84a1bebf8d0489ffaf7f2a3756bab866/imageio-2.37.3.tar.gz", hash = "sha256:bbb37efbfc4c400fcd534b367b91fcd66d5da639aaa138034431a1c5e0a41451", size = 389673, upload-time = "2026-03-09T11:31:12.573Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/fa/391e437a34e55095173dca5f24070d89cbc233ff85bf1c29c93248c6588d/imageio-2.37.3-py3-none-any.whl", hash = "sha256:46f5bb8522cd421c0f5ae104d8268f569d856b29eb1a13b92829d1970f32c9f0", size = 317646, upload-time = "2026-03-09T11:31:10.771Z" },
+]
+
+[[package]]
 name = "ipykernel"
 version = "7.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2687,6 +2700,7 @@ name = "qiskit-fundamentals"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "imageio" },
     { name = "ipykernel" },
     { name = "ipywidgets" },
     { name = "pylatexenc" },
@@ -2695,13 +2709,16 @@ dependencies = [
     { name = "qiskit-aer" },
     { name = "qiskit-algorithms" },
     { name = "qiskit-ibm-runtime" },
+    { name = "qiskit-machine-learning" },
     { name = "qiskit-nature" },
     { name = "scipy" },
     { name = "scvi-tools" },
+    { name = "torch" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "imageio" },
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "pylatexenc", specifier = ">=2.10" },
@@ -2710,9 +2727,11 @@ requires-dist = [
     { name = "qiskit-aer", specifier = ">=0.17.2" },
     { name = "qiskit-algorithms", specifier = ">=0.4.0" },
     { name = "qiskit-ibm-runtime", specifier = ">=0.45.0" },
+    { name = "qiskit-machine-learning", specifier = ">=0.9.0" },
     { name = "qiskit-nature", specifier = ">=0.7.2" },
     { name = "scipy", specifier = ">=1.17.0" },
     { name = "scvi-tools", specifier = ">=1.4.1" },
+    { name = "torch", specifier = ">=2.6.0" },
 ]
 
 [[package]]
@@ -2735,6 +2754,23 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/1b/72/edb412c34011abccf53c632c526d05e39059b3d0f1cd23e8cd3c249d7894/qiskit_ibm_runtime-0.47.0.tar.gz", hash = "sha256:3f670cc58d52fc599f09e2f533d8c91124391ed1224987e379a677a3bf801ea6", size = 1980137, upload-time = "2026-05-12T18:35:04.381Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cd/7e/1c816137b32f56013f889340c4777d4433f0568f01c0c537730bdf81288d/qiskit_ibm_runtime-0.47.0-py3-none-any.whl", hash = "sha256:5115e5d2200cbbd1dd4d71cee473787632b46b14a933c75cd65115477fc6c93a", size = 1911275, upload-time = "2026-05-12T18:35:02.157Z" },
+]
+
+[[package]]
+name = "qiskit-machine-learning"
+version = "0.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dill" },
+    { name = "numpy" },
+    { name = "qiskit" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4f/09/8884e569b9d95f508c1d66bdfcddccfcb52d7d89dbf4fba302f1dcd1b180/qiskit_machine_learning-0.9.0.tar.gz", hash = "sha256:9001e77ce26e2b12770f690ea2e5000cfee68876df69175a8c1d00ff9f5f89b1", size = 243618, upload-time = "2025-12-24T09:23:10.983Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/87/42/91d8abd05a180bf7a765961a4fd5dcaa2d1ed1da79f825cbabd1ebfe198b/qiskit_machine_learning-0.9.0-py3-none-any.whl", hash = "sha256:13e9b4fd66c1ce0114ddae135f0760e6075715815e8e724e4fa29711ac683502", size = 263107, upload-time = "2025-12-24T09:23:09.728Z" },
 ]
 
 [[package]]
